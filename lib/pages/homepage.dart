@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
-class homepage extends StatelessWidget {
-  const homepage({super.key});
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     final num days = 30;
     final String name = "Heloo bitch";
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Catalogue app"),
