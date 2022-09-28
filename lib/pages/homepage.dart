@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_declarations, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/pages/widgets/drawer.dart';
 
@@ -11,7 +13,11 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Catalogue app"),
+        elevation: 0,
+        title: Text(
+          "Catalogue app",
+          style: TextStyle(color: Colors.black),
+        ),
         centerTitle: true,
       ),
       body: Center(
@@ -19,7 +25,6 @@ class HomePage extends StatelessWidget {
           child: Text("Welcome to Flutter of $days $name"),
         ),
       ),
-      
       drawer: MyDrawer(),
     );
   }
