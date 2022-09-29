@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/models/catalog.dart';
 
@@ -8,22 +10,18 @@ class ItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      shape: StadiumBorder(),
-      shadowColor: Colors.indigo,
-      child: ListTile(
-        onTap: () {
-          print("${item.name} pressed");
-        },
-        leading: Image.network(item.image),
-        title: Text(item.name),
-        subtitle: Text(item.desc),
-        trailing: Text(
-          "\$${item.price}",
-          textScaleFactor: 1.5,
-          style: TextStyle(color: Colors.indigo, fontWeight: FontWeight.bold),
+    return Center(
+        child: Stack(
+          alignment: Alignment.bottomRight,
+          children: [
+            Card(
+              child: ListTile(
+                leading: Image.network(item.image),
+                title: Text(item.name),
+              ),
+            )
+          ],
         ),
-      ),
-    );
+      );
   }
 }

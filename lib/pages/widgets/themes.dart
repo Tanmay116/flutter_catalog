@@ -1,11 +1,12 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
-class MyTheme{
+class MyTheme {
   static ThemeData lightTheme(BuildContext context) => ThemeData(
         appBarTheme: AppBarTheme(
-            color: Colors.white,
+            color: Colors.blueGrey[900],
             elevation: 0,
             iconTheme: IconThemeData(color: Colors.black)),
         textTheme: Theme.of(context).textTheme,
@@ -13,7 +14,6 @@ class MyTheme{
         fontFamily: GoogleFonts.lato().fontFamily,
       );
 
-  static ThemeData darkTheme(BuildContext context) => ThemeData(
-     brightness: Brightness.dark, primarySwatch: Colors.deepOrange
-     );
+  static ThemeData darkTheme(BuildContext context) =>
+      ThemeData(brightness: Brightness.dark, primarySwatch: Colors.deepOrange);
 }
