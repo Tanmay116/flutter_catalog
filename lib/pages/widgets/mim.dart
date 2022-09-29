@@ -5,11 +5,15 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_catalog/models/catalog.dart';
 
+import '../../utils/routes.dart';
+
 class ItemWidget1 extends StatelessWidget {
   final Item item;
   final image =
       "https://png.pngtree.com/png-clipart/20211212/original/pngtree-3d-rendering-cryptocurrency-binance-gold-coin-with-cartoon-style-png-image_6962333.png";
-  const ItemWidget1({super.key, required this.item});
+  
+  
+   ItemWidget1({super.key, required this.item});
 
   @override
   Widget build(BuildContext context) {
@@ -28,18 +32,28 @@ class ItemWidget1 extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(2),
                   child: ElevatedButton(
-                      onPressed: null,
-                      child: Text("data"),
-                      style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all(
-                              Color.fromARGB(136, 245, 229, 8)))),
+                      onPressed: () {
+                       // Navigator.pushNamed(context, MyRoutes.loginRoute);
+                      },
+                      child: Text(
+                        "Login",
+                      ),
+                      style: TextButton.styleFrom(minimumSize: Size(180, 40))),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(2),
-                  child: ElevatedButton(onPressed: null, child: Text("far")),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      //Navigator.pushNamed(context, MyRoutes.loginRoute);
+                    },
+                    child: Text("far"),
+                    style: TextButton.styleFrom(
+                      minimumSize: Size(180, 40),
+                    ),
+                  ),
                 )
               ],
-            ),
+            ), 
           ],
         ),
       ),
