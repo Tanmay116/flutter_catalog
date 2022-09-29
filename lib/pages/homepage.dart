@@ -1,15 +1,16 @@
 // ignore_for_file: prefer_const_declarations, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog/models/catalog.dart';
 import 'package:flutter_catalog/pages/widgets/drawer.dart';
+import 'package:flutter_catalog/pages/widgets/item_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final num days = 30;
-    final String name = "Heloo bitch";
+    final dummyList = List.generate(4, (index) => CatalogModel.items[0]);
 
     return Scaffold(
       appBar: AppBar(
@@ -24,10 +25,16 @@ class HomePage extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: Center(
-        child: Container(
-          child: Text("Welcome to Flutter of $days $name"),
-        ),
+      body: Padding(
+        padding: EdgeInsets.all(16),
+        child: ListView.builder(
+            itemCount: dummyList.length,
+            itemBuilder: (context, index) {
+              return ItemWidget(
+                item: dummyList[index],
+                key: Key('lol'),
+              );
+            }),
       ),
       drawer: MyDrawer(),
     );
