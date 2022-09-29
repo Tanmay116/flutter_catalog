@@ -14,6 +14,10 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
+        actions: <Widget>[
+          IconButton(onPressed: null, icon: Icon(Icons.search)),
+          IconButton(onPressed: null, icon: Icon(Icons.qr_code_scanner_sharp)),
+        ],
         title: Text(
           "Catalogue app",
           style: TextStyle(color: Colors.black),
