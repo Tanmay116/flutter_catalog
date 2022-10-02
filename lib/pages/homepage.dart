@@ -1,7 +1,10 @@
 // ignore_for_file: prefer_const_declarations, prefer_const_constructors, prefer_const_literals_to_create_immutables, sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog/pages/widgets/drawer.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter/material.dart';
+import '../utils/routes.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -424,10 +427,9 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-      drawer: Drawer(),
+      drawer: MyDrawer(),
     );
   }
 }
 
 
-//sfasgvdqbwufyvbyfsdajidddddddfffffffffffffnsuirgvbewyfweyfgfg vxfgvbdsgfvbsd yzfgbes

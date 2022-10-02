@@ -13,24 +13,25 @@ class MyDrawer extends StatelessWidget {
 
     return Drawer(
       child: Container(
-        color: Colors.indigo,
+        color: Colors.orangeAccent[400],
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
             DrawerHeader(
-                padding: EdgeInsets.zero,
-                child: UserAccountsDrawerHeader(
-                  accountName: Text(
-                    "Tanmay Mistry",
-                  ),
-                  accountEmail: Text("tanmay@gmail.com"),
-                  margin: EdgeInsets.zero,
-                  currentAccountPicture: CircleAvatar(
-                    backgroundColor: Colors.black,
-                    radius: 150,
-                    backgroundImage: NetworkImage(imgURL),
-                  ),
-                )),
+              padding: EdgeInsets.zero,
+              child: UserAccountsDrawerHeader(
+                decoration: BoxDecoration(color: Colors.orangeAccent[400]),
+                accountName: Text(
+                  "Tanmay Mistry",
+                ),
+                accountEmail: Text("tanmay@gmail.com"),
+                margin: EdgeInsets.zero,
+                currentAccountPicture: CircleAvatar(
+                  radius: 150,
+                  backgroundImage: NetworkImage(imgURL),
+                ),
+              ),
+            ),
             ListTile(
               leading: Icon(
                 CupertinoIcons.home,
