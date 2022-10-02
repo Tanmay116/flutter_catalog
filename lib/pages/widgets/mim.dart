@@ -8,12 +8,12 @@ import 'package:flutter_catalog/models/catalog.dart';
 import '../../utils/routes.dart';
 
 class ItemWidget1 extends StatelessWidget {
-  final Item item;
+ // final Item item;
   final image =
       "https://png.pngtree.com/png-clipart/20211212/original/pngtree-3d-rendering-cryptocurrency-binance-gold-coin-with-cartoon-style-png-image_6962333.png";
   
   
-   ItemWidget1({super.key, required this.item});
+  // ItemWidget1({super.key, required this.item});
 
   @override
   Widget build(BuildContext context) {

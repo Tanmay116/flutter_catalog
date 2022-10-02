@@ -1,30 +1,19 @@
-class CatalogModel {
-  static final items = [
-    Item(
-      id: 1,
-      name: "Iphone 12 Pro",
-      desc: "Apple",
-      price: 999,
-      color: "3350a",
-      image:
-          "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MHKK3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1603649004000",
-    )
-  ];
-}
+import 'package:flutter/material.dart';
 
-class Item {
-  final num id;
-  final String name;
-  final String desc;
-  final num price;
-  final String color;
-  final String image;
+class LandingScreen extends StatelessWidget {
+  const LandingScreen({super.key});
 
-  Item(
-      {required this.id,
-      required this.name,
-      required this.desc,
-      required this.price,
-      required this.color,
-      required this.image});
+  @override
+  Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
+    return Scaffold(
+      body: Container(
+        height: 100,
+        width: 100,
+        child: Column(
+
+        ),
+      ),
+    );
+  }
 }
